@@ -1,9 +1,9 @@
-import Image from "next/image";
+
 import { Moviecard } from "./moviecard";
 import { Header } from "./header";
 
 import { Carosel } from "./corosel";
-import { string } from "zod";
+
 
 export default function Home() {
   return (
