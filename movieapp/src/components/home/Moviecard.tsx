@@ -18,7 +18,7 @@ export const Moviecard = ({ title, Score, Image }: MovieCardProps) => {
       <Card className="h-[440px] w-[230px] bg-secondary p-0 overflow-hidden gap-2 px-0">
         <CardContent className="w-[230px] h-[340px] px-0">
           <img
-            src={Image}
+            src={`https://image.tmdb.org/t/p/w500/${Image}`}
             alt=""
             className="w-[230px] h-[340px] object-cover"
           />
@@ -27,7 +27,8 @@ export const Moviecard = ({ title, Score, Image }: MovieCardProps) => {
           <CardDescription className="flex gap-2">
             <span className="flex gap-2 items-center">
               {" "}
-              <FaStar color="#FDE047" /><span className="text-[14px]"> {Score}</span> /10
+              <FaStar color="#FDE047" />
+              <span className="text-[14px]"> {Score}</span> /10
             </span>
           </CardDescription>
           <CardTitle className="pt-2">{title}</CardTitle>
