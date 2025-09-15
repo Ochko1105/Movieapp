@@ -9,10 +9,19 @@ export type MovieType = {
   release_date: string;
   title: string;
   vote_average: number;
+  runtime: number;
+  genres: string[];
+  crew: string[];
 };
 
 export type movieResponseType = {
   page: number;
   totalPages: number;
+  id: number;
   results: MovieType[];
+};
+
+export type Directorname = {
+  cast: string[];
+  crew: string[];
 };

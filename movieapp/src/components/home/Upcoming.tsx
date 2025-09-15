@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Moviecard } from "./Moviecard";
 import { Key } from "react";
 import { getMoviesList } from "../../../utilis/get-data";
-import { movieResponseType } from "../../../typs";
+import { movieResponseType } from "../../../type";
 
 type Slicecount = {
   slice1: number | undefined;
@@ -33,12 +33,13 @@ export default async function Upcoming({ slice1, slice2 }: Slicecount) {
             .slice(slice1, slice2)
             .map(
               (movie: {
-                id: Key | null | undefined;
+                id: number;
                 title: string;
                 vote_average: number;
                 poster_path: string;
               }) => (
                 <Moviecard
+                  id={movie.id}
                   key={movie.id}
                   title={movie.title}
                   Score={movie.vote_average}

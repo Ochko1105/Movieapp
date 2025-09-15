@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Moviecard } from "./Moviecard";
 import { Key } from "react";
 import { getMoviesList } from "../../../utilis/get-data";
-import { movieResponseType } from "../../../typs";
+import { movieResponseType } from "../../../type";
 
 type Slicecount = {
   slice1: number | undefined;
@@ -19,7 +19,7 @@ export default async function TopRated({ slice1, slice2 }: Slicecount) {
     <div>
       <div className="flex justify-between pl-30 pt-10">
         <div className="text-[24px] font-semibold">Top rated</div>
-        <Link href="/genre/Popular">
+        <Link href="/Toprated">
           {" "}
           <Button className="bg-white text-black ">
             See more{" "}
@@ -33,12 +33,13 @@ export default async function TopRated({ slice1, slice2 }: Slicecount) {
             .slice(slice1, slice2)
             .map(
               (movie: {
-                id: Key | null | undefined;
                 title: string;
                 vote_average: number;
                 poster_path: string;
+                id: number;
               }) => (
                 <Moviecard
+                  id={movie.id}
                   key={movie.id}
                   title={movie.title}
                   Score={movie.vote_average}

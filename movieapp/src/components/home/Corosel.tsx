@@ -12,7 +12,7 @@ import { FaStar } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
 import { MdOutlinePlayArrow } from "react-icons/md";
-import { MovieType } from "../../../typs";
+import { MovieType } from "../../../type";
 
 type MovieCarouselProps = {
   movies: MovieType[];

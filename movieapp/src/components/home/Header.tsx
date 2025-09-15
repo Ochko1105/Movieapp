@@ -1,4 +1,3 @@
-import React from "react";
 import { ModeToggle } from "./Theme";
 import { Genrepage } from "./Genre";
 import { SearchInput } from "@/components/ui/input";
@@ -6,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 
 import Link from "next/link";
 
-export const Header = () => {
+export async function Header() {
   return (
     <div className="w-[1280px] h-[60px] flex justify-between items-center ml-20 m-auto">
       <div className="flex gap-2">
@@ -29,4 +28,4 @@ export const Header = () => {
       <ModeToggle></ModeToggle>
     </div>
   );
-};
+}

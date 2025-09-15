@@ -9,7 +9,7 @@ import { PaginationDemo } from "@/components/home/Pagination";
 
 import { getMoviesList } from "../../../utilis/get-data";
 
-import { movieResponseType } from "../../../typs";
+import { movieResponseType } from "../../../type";
 
 const upcomingMovies: movieResponseType = await getMoviesList("now_playing");
 
